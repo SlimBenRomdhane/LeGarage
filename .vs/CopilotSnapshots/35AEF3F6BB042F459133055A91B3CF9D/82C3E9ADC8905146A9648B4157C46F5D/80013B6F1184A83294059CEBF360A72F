@@ -1,0 +1,23 @@
+﻿
+using LeGarage.Core.Common;
+using System;
+using System.Collections.Generic;
+
+namespace LeGarage.Core.Entities;
+
+public partial class Assignment : BaseEntity
+{
+    public int Userid { get; set; }
+
+    public int Workshopid { get; set; }
+
+    public int Assignmentid { get; set; }
+
+    public DateOnly? Assignmentdate { get; set; }
+
+    public required string Role { get; set; }
+
+    public User? User { get; set; }
+
+    public WorkShop? WorkShop { get; set; }
+}

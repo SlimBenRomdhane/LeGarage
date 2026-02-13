@@ -1,0 +1,42 @@
+﻿using LeGarage.Core.Common;
+using System;
+using System.Collections.Generic;
+
+namespace LeGarage.Core.Entities;
+
+public class WorkOrder : BaseEntity
+{
+    public int Workshopid { get; set; }
+
+    public int? Invoiceid { get; set; }
+
+    public int Vehicleid { get; set; }
+
+    public int? Workordernumber { get; set; }
+
+    public int? Mileage { get; set; }
+
+    public string Status { get; set; }
+
+    public DateOnly? Scheduledstart { get; set; }
+
+    public DateOnly? Actualstart { get; set; }
+
+    public DateOnly? Actualend { get; set; }
+
+    public decimal? Laborcost { get; set; }
+
+    public decimal? Partscost { get; set; }
+
+    public decimal? Externalservicecost { get; set; }
+
+    public decimal? Totalcost { get; set; }
+
+    public Invoice Invoice { get; set; }
+
+    public ICollection<Task> Tasks { get; set; } = new List<Task>();
+
+    public Vehicle Vehicle { get; set; }
+
+    public WorkShop Workshop { get; set; }
+}

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="LeGarage.Api/LeGarage.Api.csproj" />
+    <Project Path="LeGarage.Application/LeGarage.Application.csproj" />
+    <Project Path="LeGarage.Core/LeGarage.Core.csproj" />
+    <Project Path="LeGarage.Infrastructure/LeGarage.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>

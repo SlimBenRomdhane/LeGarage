@@ -1,0 +1,149 @@
+﻿{
+   "CodeGenerationMode": 6,
+   "ContextClassName": "WorkshopContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "IrregularWords": null,
+   "MinimumProductVersion": "2.6.1301",
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PluralRules": null,
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "LeGarage.Infrastructure",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "SingularRules": null,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "public.assignment",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.baseentity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.bridge",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.client",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.externalservice",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.invoice",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.pauserecord",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.payment",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.paymentallocation",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.paymentmethod",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.providedservice",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.providedservicecategory",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.provider",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.sparepart",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.sparepartcategory",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.stockreplenishment",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.task",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.taskexternalserviceusage",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.taskpartusage",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.User",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.vehicle",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.warehouse",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.warehousestock",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.workorder",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.workshop",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}

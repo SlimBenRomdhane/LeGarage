@@ -1,0 +1,33 @@
+﻿
+using LeGarage.Core.Common;
+
+namespace LeGarage.Core.Entities;
+
+public class StockReplenishment : BaseEntity
+{
+    public int Sparepartid { get; set; }
+
+    public int Providerid { get; set; }
+
+    public int Warehouseid { get; set; }
+
+    public required string Receptionreceipt { get; set; }
+
+    public int Receivedquantity { get; set; }
+
+    public DateOnly? Receptiondate { get; set; }
+
+    public decimal? Unitpriceatpurchase { get; set; }
+
+    public decimal? Discount { get; set; }
+
+    public decimal? Vat { get; set; }
+
+    public decimal? Margin { get; set; }
+
+    public Provider? Provider { get; set; }
+
+    public SparePart? SparePart { get; set; }
+
+    public Warehouse? Warehouse { get; set; }
+}

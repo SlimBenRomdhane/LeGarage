@@ -1,0 +1,29 @@
+﻿
+using LeGarage.Core.Common;
+
+namespace LeGarage.Core.Entities;
+
+public class SparePart : BaseEntity
+{
+    public int Sparepartcategoryid { get; set; }
+
+    public required string Sparepartcode { get; set; }
+
+    public required string Name { get; set; }
+
+    public string? Description { get; set; }
+
+    public decimal? Unitprice { get; set; }
+
+    public int? Availablequantity { get; set; }
+
+    public int? Minimumstock { get; set; }
+
+    public SparePartCategory? SparePartCategory { get; set; }
+
+    public ICollection<StockReplenishment> StockReplenishment { get; set; } = new List<StockReplenishment>();
+
+    public ICollection<TaskPartUsage> Taskpartusages { get; set; } = new List<TaskPartUsage>();
+
+    public ICollection<WarehouseStock> Warehousestocks { get; set; } = new List<WarehouseStock>();
+}
