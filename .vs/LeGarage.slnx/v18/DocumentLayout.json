@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "LeGarage.Core\\Entities\\ApplicationUser.cs",
               "ToolTip": "D:\\2026\\LeGarage\\LeGarage.Core\\Entities\\ApplicationUser.cs",
               "RelativeToolTip": "LeGarage.Core\\Entities\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-13T16:04:08.135Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "LeGarage.Core\\Entities\\Assignment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:08:22.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T15:08:22.397Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "LeGarage.Core\\Configurations\\AssignmentConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:08:16.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T15:08:16.324Z"
             }
           ]
         }
