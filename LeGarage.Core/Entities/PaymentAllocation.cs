@@ -1,11 +1,9 @@
-﻿ using LeGarage.Core.Common;
- using System;
- using System.Collections.Generic;
+﻿using LeGarage.Core.Common;
 
- namespace LeGarage.Core.Entities;
+namespace LeGarage.Core.Entities;
 
- public class PaymentAllocation : BaseEntity
- {
+public class PaymentAllocation : BaseEntity
+{
     public int InvoiceId { get; set; }
 
     public int PaymentId { get; set; }
@@ -14,7 +12,7 @@
 
     public decimal? AmountAllocated { get; set; }
 
-     public Invoice? Invoice { get; set; }
+    public Invoice? Invoice { get; set; }
 
-     public Payment? Payment { get; set; }
- }
+    public Payment? Payment { get; set; }
+}

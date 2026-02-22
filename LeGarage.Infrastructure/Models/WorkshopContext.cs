@@ -65,133 +65,13 @@ public partial class WorkshopContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Assignment>(entity =>
+      base.OnModelCreating(modelBuilder);
+        foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e=>e.GetForeignKeys()))
         {
-            entity.HasKey(e => new { e.Userid, e.Workshopid, e.Assignmentid }).HasName("pk_assignment");
+            relationship.DeleteBehavior = DeleteBehavior.Restrict;
+        }
 
-            entity.ToTable("assignment");
 
-            entity.HasIndex(e => new { e.Userid, e.Workshopid, e.Assignmentid }, "assignment_pk").IsUnique();
-
-            entity.HasIndex(e => e.Userid, "association7_fk");
-
-            entity.HasIndex(e => e.Workshopid, "association7_fk2");
-
-            entity.Property(e => e.Userid).HasColumnName("userid");
-            entity.Property(e => e.Workshopid).HasColumnName("workshopid");
-            entity.Property(e => e.Assignmentid).HasColumnName("assignmentid");
-            entity.Property(e => e.Assignmentdate).HasColumnName("assignmentdate");
-            entity.Property(e => e.Role)
-                .HasMaxLength(254)
-                .HasColumnName("role");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Assignments)
-                .HasForeignKey(d => d.Userid)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasConstraintName("fk_assignme_associati_user");
-
-            entity.HasOne(d => d.Workshop).WithMany(p => p.Assignments)
-                .HasForeignKey(d => d.Workshopid)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasConstraintName("fk_assignme_associati_workshop");
-        });
-
-        modelBuilder.Entity<Baseentity>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("pk_baseentity");
-
-            entity.ToTable("baseentity");
-
-            entity.HasIndex(e => e.Id, "baseentity_pk").IsUnique();
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
-            entity.Property(e => e.Createdat).HasColumnName("createdat");
-            entity.Property(e => e.Createdby)
-                .HasMaxLength(254)
-                .HasColumnName("createdby");
-            entity.Property(e => e.Deletedat).HasColumnName("deletedat");
-            entity.Property(e => e.Deletedby)
-                .HasMaxLength(254)
-                .HasColumnName("deletedby");
-            entity.Property(e => e.Isactive).HasColumnName("isactive");
-            entity.Property(e => e.Notes).HasColumnName("notes");
-            entity.Property(e => e.Restoredat).HasColumnName("restoredat");
-            entity.Property(e => e.Restoredby)
-                .HasMaxLength(254)
-                .HasColumnName("restoredby");
-            entity.Property(e => e.Updatedat).HasColumnName("updatedat");
-            entity.Property(e => e.Updatedby)
-                .HasMaxLength(254)
-                .HasColumnName("updatedby");
-        });
-
-        modelBuilder.Entity<Bridge>(entity =>
-        {
-            entity.HasKey(e => e.Bridgeid).HasName("pk_bridge");
-
-            entity.ToTable("bridge");
-
-            entity.HasIndex(e => e.Workshopid, "association6_fk");
-
-            entity.HasIndex(e => e.Bridgeid, "bridge_pk").IsUnique();
-
-            entity.Property(e => e.Bridgeid)
-                .ValueGeneratedNever()
-                .HasColumnName("bridgeid");
-            entity.Property(e => e.Capacitykg).HasColumnName("capacitykg");
-            entity.Property(e => e.Code)
-                .HasMaxLength(254)
-                .HasColumnName("code");
-            entity.Property(e => e.Isavailable).HasColumnName("isavailable");
-            entity.Property(e => e.Name)
-                .HasMaxLength(254)
-                .HasColumnName("name");
-            entity.Property(e => e.Workshopid).HasColumnName("workshopid");
-
-            entity.HasOne(d => d.Workshop).WithMany(p => p.Bridges)
-                .HasForeignKey(d => d.Workshopid)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasConstraintName("fk_bridge_associati_workshop");
-        });
-
-        modelBuilder.Entity<Client>(entity =>
-        {
-            entity.HasKey(e => e.Clientid).HasName("pk_client");
-
-            entity.ToTable("client");
-
-            entity.HasIndex(e => e.Clientid, "client_pk").IsUnique();
-
-            entity.Property(e => e.Clientid)
-                .ValueGeneratedNever()
-                .HasColumnName("clientid");
-            entity.Property(e => e.Address)
-                .HasMaxLength(254)
-                .HasColumnName("address");
-            entity.Property(e => e.Cin)
-                .HasMaxLength(254)
-                .HasColumnName("cin");
-            entity.Property(e => e.Companyid)
-                .HasMaxLength(254)
-                .HasColumnName("companyid");
-            entity.Property(e => e.Companyname)
-                .HasMaxLength(254)
-                .HasColumnName("companyname");
-            entity.Property(e => e.Email)
-                .HasMaxLength(254)
-                .HasColumnName("email");
-            entity.Property(e => e.Firstname)
-                .HasMaxLength(254)
-                .HasColumnName("firstname");
-            entity.Property(e => e.Lastname)
-                .HasMaxLength(254)
-                .HasColumnName("lastname");
-            entity.Property(e => e.Phone)
-                .HasMaxLength(254)
-                .HasColumnName("phone");
-        });
 
         modelBuilder.Entity<Externalservice>(entity =>
         {

@@ -4,36 +4,35 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LeGarage.Core.Configurations
 {
-    public class AssignmentConfiguration : IEntityTypeConfiguration<Assignment>
+    public class AssignmentConfiguration : BaseEntityConfiguration<Assignment>
     {
-        public void Configure(EntityTypeBuilder<Assignment> entity)
+
+        public override void Configure(EntityTypeBuilder<Assignment> entity)
         {
-            entity.HasKey(x => x.Id);
+            // Call the base class's Configure method to apply common configurations
+            base.Configure(entity);
 
-            //entity.HasKey(e => new { e.Userid, e.Workshopid, e.Assignmentid }).HasName("pk_assignment");
-            //entity.ToTable("assignment");
-            entity.HasIndex(e => new { e.UserId, e.WorkshopId }, "assignment_pk").IsUnique();
-            
-            entity.HasIndex(e => e.Userid, "association7_fk");
-            entity.HasIndex(e => e.Workshopid, "association7_fk2");
-            entity.Property(e => e.Userid).HasColumnName("userid");
-            entity.Property(e => e.Workshopid).HasColumnName("workshopid");
-            entity.Property(e => e.Assignmentid).HasColumnName("assignmentid");
-            entity.Property(e => e.Assignmentdate).HasColumnName("assignmentdate");
-            entity.Property(e => e.Role)
-                .HasMaxLength(254)
-                .HasColumnName("role");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Assignments)
-                .HasForeignKey(d => d.Userid)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasConstraintName("fk_assignme_associati_user");
-
-            entity.HasOne(d => d.Workshop).WithMany(p => p.Assignments)
-                .HasForeignKey(d => d.Workshopid)
-                .OnDelete(DeleteBehavior.Restrict)
-                .HasConstraintName("fk_assignme_associati_workshop");
-
+            // Define a unique index on the combination of UserId and WorkshopId
+            entity.HasIndex(e => new { e.UserId, e.WorkshopId })
+                .IsUnique();
+            // Define indexes on UserId and WorkshopId for faster lookups
+            entity.HasIndex(e => e.UserId);
+            entity.HasIndex(e => e.WorkshopId);
+            // Map properties to their respective column names
+            entity.Property(e => e.UserId);
+            entity.Property(e => e.WorkshopId);
+            entity.Property(e => e.AssignmentDate);
+            entity.Property(e => e.Role).HasMaxLength(50);
+            // Configure the relationship between Assignment and ApplicationUser
+            entity.HasOne(a => a.User)
+                .WithMany(u => u.Assignments)
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            // Configure the relationship between Assignment and WorkShop
+            entity.HasOne(d => d.WorkShop)
+                .WithMany(d => d.Assignments)
+                .HasForeignKey(d => d.WorkshopId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

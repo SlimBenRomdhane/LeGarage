@@ -1,5 +1,0 @@
-D:\2026\LeGarage\LeGarage.Core\obj\Debug\net10.0\LeGarage.Core.csproj.AssemblyReference.cache
-D:\2026\LeGarage\LeGarage.Core\obj\Debug\net10.0\LeGarage.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\2026\LeGarage\LeGarage.Core\obj\Debug\net10.0\LeGarage.Core.AssemblyInfoInputs.cache
-D:\2026\LeGarage\LeGarage.Core\obj\Debug\net10.0\LeGarage.Core.AssemblyInfo.cs
-D:\2026\LeGarage\LeGarage.Core\obj\Debug\net10.0\LeGarage.Core.csproj.CoreCompileInputs.cache

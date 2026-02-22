@@ -17,8 +17,9 @@ public class WorkShop : BaseEntity
     public string? OpeningHours { get; set; }
 
     public ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
-
     public ICollection<Bridge> Bridges { get; set; } = new List<Bridge>();
-
     public ICollection<WorkOrder> Workorders { get; set; } = new List<WorkOrder>();
+    public ICollection<ToolBox> ToolBoxes { get; set; } = new List<ToolBox>();
+    public ICollection<Machine> Machines { get; set; } = new List<Machine>();
+
 }
