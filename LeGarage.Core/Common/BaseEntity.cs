@@ -13,7 +13,5 @@
         public string? DeletedBy { get; set; }
         public DateTime? RestoredAt { get; set; }
         public string? RestoredBy { get; set; }
-
-
     }
 }
