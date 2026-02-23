@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeGarage.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fbf70f723f9c7ab5379f744ee5a99f3da619414")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cc0345ec692859b594b8bf178e4fbcaaeae0fd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeGarage.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeGarage.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
